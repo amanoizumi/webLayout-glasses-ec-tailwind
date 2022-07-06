@@ -1,6 +1,9 @@
+"use strict";
+
 $(function () {
   function menuToggle() {
-    const icon = this.children[0];
+    var icon = this.children[0];
+
     if ($('#dropDownMenu').hasClass('hidden')) {
       $(icon).removeClass('bi-list').addClass('bi-x-lg');
       $('#dropDownMenu').removeClass('hidden').addClass('grid grid-cols-2');
@@ -12,3 +15,4 @@ $(function () {
 
   $('#dropDownBtn').on('click', menuToggle);
 });
+//# sourceMappingURL=all.js.map

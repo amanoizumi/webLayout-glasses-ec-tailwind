@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>系列鏡框</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontSize: {
+            sm: ['14px', '21px'],
+            base: ['16px', '24px'],
+            lg: ['20px', '30px'],
+            xl: ['24px', '36px'],
+            '2xl': ['32px', '48px'],
+            '3xl': ['36px', '54px'],
+            '4xl': ['42px', '63px'],
+            '5xl': ['48px', '72px'],
+            '6xl': ['64px', '96px'],
+          },
+          extend: {
+            colors: {
+              primary: '#aa0601',
+              light: '#fbf2f2',
+              dark: '#650300',
+            },
+            boxShadow: {
+              custom: '0px 2px 6px #00000029',
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .input-style {
+          @apply block bg-transparent border border-black focus:outline-none focus:border-rose-800 focus:ring-rose-800 focus:bg-white;
+          &::placeholder {
+            color: #aaaaaa;
+          }
+        }
+        .frames-nav li.active {
+          @apply relative after:content-[''] after:absolute after:w-full after:h-2 after:bg-primary after:bottom-0 after:left-0;
+        }
+      }
+      @layer base {
+        textarea {
+          resize: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
+
+  <body class="relative pt-[81px]">
+    <div class="bg-primary fixed w-full top-0 z-30">
+      <nav class="flex sm:justify-between max-w-[1320px] mx-auto px-[15px] md:px-9 lg:px-3 py-4">
+        <a href="index.html">
+          <h1
+            class="overflow-hidden bg-[url('./assets/images/desktop/logo.png')] w-20 h-[49px] indent-[110%] whitespace-nowrap"
+          >
+            Glasses
+          </h1>
+        </a>
+        <ul
+          id="dropDownMenu"
+          class="bg-primary text-center absolute sm:static top-20 inset-x-0 hidden sm:flex text-lg items-center border-t border-white sm:border-0 sm:space-x-16"
+        >
+          <li>
+            <a
+              class="text-white block py-2 sm:p-0 sm:hover:underline sm:underline-offset-8 hover:bg-dark sm:hover:bg-transparent sm:hover:decoration-2"
+              href="frames-optical.html"
+              >系列鏡框</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-white block py-2 sm:p-0 sm:hover:underline sm:underline-offset-8 hover:bg-dark sm:hover:bg-transparent sm:hover:decoration-2"
+              href="store.html"
+              >門市據點</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-white block py-2 sm:p-0 sm:hover:underline sm:underline-offset-8 hover:bg-dark sm:hover:bg-transparent sm:hover:decoration-2"
+              href="blog.html"
+              >部落格</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-white block py-2 sm:p-0 sm:hover:underline sm:underline-offset-8 hover:bg-dark sm:hover:bg-transparent sm:hover:decoration-2"
+              href="qa.html"
+              >常見問題</a
+            >
+          </li>
+        </ul>
+        <button type="button" class="flex ml-auto items-start sm:hidden" id="dropDownBtn">
+          <i class="bi bi-list text-2xl text-white"></i>
+        </button>
+      </nav>
+    </div>
+    
+<nav class="frames-nav max-w-[1320px] mx-auto md:px-9 lg:px-3">
+  <ul class="flex sm:text-xl md:text-2xl text-center font-medium">
+    <li class="flex-1 border border-[#dcdcdc]">
+      <a class="block md:py-6 py-4" href="frames-optical.html">OPTICAL</a>
+    </li>
+    <li class="flex-1 border border-[#dcdcdc] active">
+      <a class="block md:py-6 py-4" href="frames-sunglasses.html">SUNGLASSES</a>
+    </li>
+    <li class="flex-1 border border-[#dcdcdc]">
+      <a class="block md:py-6 py-4" href="#">FUNCTIONAL</a>
+    </li>
+  </ul>
+</nav>
+<div class="flex h-[136px] sm:h-[296px]">
+  <div
+    class="h-full w-1/2 bg-[url('./assets/images/mobile/product-header-3.png')] md:bg-[url('./assets/images/tablet/product-header-3.png')] lg:bg-[url('./assets/images/desktop/product-header-3.png')] bg-cover bg-center"
+  ></div>
+  <div
+    class="h-full w-1/2 bg-[url('./assets/images/mobile/product-header-4.png')] md:bg-[url('./assets/images/tablet/product-header-4.png')] lg:bg-[url('./assets/images/desktop/product-header-4.png')] bg-cover bg-center"
+  ></div>
+</div>
+<main>
+  <section>
+    <div class="max-w-[1320px] mx-auto px-[15px] md:px-9 lg:px-3 pt-10 sm:pt-20 pb-16 sm:pb-20">
+      <h3 class="font-medium text-xl sm:text-4xl text-center">2020 NEW COLLECTION</h3>
+      <h2 class="font-regular text-xl sm:text-2xl sm:mb-8 mb-6 text-center">賽璐珞鈦金屬混合鏡框</h2>
+      <ul
+        class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 sm:gap-y-10 md:gap-y-20 mb-16 sm:mb-20"
+      >
+        <li>
+          <div
+            class="h-[168px] bg-[url('./assets/images/mobile/product-7.png')] md:bg-[url('./assets/images/tablet/product-7.png')] lg:bg-[url('./assets/images/desktop/product-7.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex justify-between text-xl">
+            <h4>BJ41600S</h4>
+            <p class="text-primary font-medium">NTD3,490</p>
+          </div>
+          <ul class="flex space-x-2">
+            <li><a href="#" class="w-6 h-6 bg-[#5F3E2D] rounded"></a></li>
+            <li><a href="#" class="w-6 h-6 bg-[#B75929] rounded"></a></li>
+          </ul>
+        </li>
+        <li>
+          <div
+            class="h-[168px] bg-[url('./assets/images/mobile/product-8.png')] lg:bg-[url('./assets/images/desktop/product-8.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex justify-between text-xl">
+            <h4>BJ41600S</h4>
+            <p class="text-primary font-medium">NTD3,490</p>
+          </div>
+          <ul class="flex space-x-2">
+            <li><a href="#" class="w-6 h-6 bg-[#5F3E2D] rounded"></a></li>
+            <li><a href="#" class="w-6 h-6 bg-[#B75929] rounded"></a></li>
+          </ul>
+        </li>
+        <li>
+          <div
+            class="h-[168px] bg-[url('./assets/images/mobile/product-9.png')] md:bg-[url('./assets/images/tablet/product-9.png')] lg:bg-[url('./assets/images/desktop/product-9.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex justify-between text-xl">
+            <h4>BJ41600S</h4>
+            <p class="text-primary font-medium">NTD3,490</p>
+          </div>
+          <ul class="flex space-x-2">
+            <li><a href="#" class="w-6 h-6 bg-[#5F3E2D] rounded"></a></li>
+            <li><a href="#" class="w-6 h-6 bg-[#B75929] rounded"></a></li>
+          </ul>
+        </li>
+        <li>
+          <div
+            class="h-[168px] bg-[url('./assets/images/mobile/product-10.png')] md:bg-[url('./assets/images/tablet/product-10.png')] lg:bg-[url('./assets/images/desktop/product-10.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex justify-between text-xl">
+            <h4>BJ41600S</h4>
+            <p class="text-primary font-medium">NTD3,490</p>
+          </div>
+          <ul class="flex space-x-2">
+            <li><a href="#" class="w-6 h-6 bg-[#5F3E2D] rounded"></a></li>
+            <li><a href="#" class="w-6 h-6 bg-[#B75929] rounded"></a></li>
+          </ul>
+        </li>
+        <li>
+          <div
+            class="h-[168px] bg-[url('./assets/images/mobile/product-11.png')] md:bg-[url('./assets/images/tablet/product-11.png')] lg:bg-[url('./assets/images/desktop/product-11.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex justify-between text-xl">
+            <h4>BJ41600S</h4>
+            <p class="text-primary font-medium">NTD3,490</p>
+          </div>
+          <ul class="flex space-x-2">
+            <li><a href="#" class="w-6 h-6 bg-[#5F3E2D] rounded"></a></li>
+            <li><a href="#" class="w-6 h-6 bg-[#B75929] rounded"></a></li>
+          </ul>
+        </li>
+        <li>
+          <div
+            class="h-[168px] bg-[url('./assets/images/tablet/product-12.png')] lg:bg-[url('./assets/images/desktop/product-12.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex justify-between text-xl">
+            <h4>BJ41600S</h4>
+            <p class="text-primary font-medium">NTD3,490</p>
+          </div>
+          <ul class="flex space-x-2">
+            <li><a href="#" class="w-6 h-6 bg-[#5F3E2D] rounded"></a></li>
+            <li><a href="#" class="w-6 h-6 bg-[#B75929] rounded"></a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="flex justify-center text-[#555555]">
+        <li class="border border-r-0 border-[#555555]">
+          <a class="flex items-center px-[14px] py-3 h-full hover:bg-[#f2f2f2] hover:text-black" href="#"
+            >上一頁</a
+          >
+        </li>
+        <li class="border border-r-0 border-[#555555]">
+          <a
+            class="flex items-center px-[14px] py-3 h-full hover:bg-[#f2f2f2] hover:text-black align-middle"
+            href="#"
+            >1</a
+          >
+        </li>
+        <li class="border border-r-0 border-[#555555]">
+          <a
+            class="flex items-center px-[14px] py-3 h-full bg-black text-white hover:bg-[#f2f2f2] hover:text-black"
+            href="#"
+            >2</a
+          >
+        </li>
+        <li class="border border-r-0 border-[#555555]">
+          <a class="flex items-center px-[14px] py-3 h-full hover:bg-[#f2f2f2] hover:text-black" href="#"
+            >3</a
+          >
+        </li>
+        <li class="border border-r-0 border-[#555555]">
+          <a class="flex items-center px-[14px] py-3 h-full hover:bg-[#f2f2f2] hover:text-black" href="#"
+            >4</a
+          >
+        </li>
+        <li class="border border-r-0 border-[#555555]">
+          <a class="flex items-center px-[14px] py-3 h-full hover:bg-[#f2f2f2] hover:text-black" href="#"
+            >5</a
+          >
+        </li>
+        <li class="border border-[#555555]">
+          <a class="flex items-center px-[14px] py-3 h-full hover:bg-[#f2f2f2] hover:text-black" href="#"
+            >下一頁</a
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+    <footer class="bg-primary pt-6 sm:pt-12">
+      <div class="max-w-[1320px] mx-auto px-3">
+        <div class="flex flex-row-reverse justify-between sm:flex-col">
+          <div class="flex justify-between sm:mb-[45px]">
+            <ul class="hidden sm:items-center sm:flex sm:space-x-8 md:space-x-12">
+              <li><a class="text-white hover:opacity-60" href="#">首頁</a></li>
+              <li><a class="text-white hover:opacity-60" href="#">系列鏡框</a></li>
+              <li><a class="text-white hover:opacity-60" href="#">門市據點</a></li>
+              <li><a class="text-white hover:opacity-60" href="#">部落格</a></li>
+              <li><a class="text-white hover:opacity-60" href="#">常見問題</a></li>
+            </ul>
+            <ul class="flex space-x-2 sm:space-x-4 md:space-x-8">
+              <li>
+                <a href="#">
+                  <img
+                    class="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-60"
+                    src="./assets/images/desktop/ic_social_fb.png"
+                    alt="前往我們的FB"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    class="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-60"
+                    src="./assets/images/desktop/ic_social_ig.png"
+                    alt="前往我們的IG"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    class="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-60"
+                    src="./assets/images/desktop/ic_social_line.png"
+                    alt="加我們LINE"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="text-noto pb-6 sm:pb-9">
+            <li class="flex items-center mb-2">
+              <div
+                class="flex justify-center items-center w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 mr-2 sm:mr-4"
+              >
+                <img src="./assets/images/desktop/icon-phone.svg" alt="電話" />
+              </div>
+              <a href="tel:+8860800-000-000" class="sm:text-3xl text-white hover:opacity-60">0800-000-000</a>
+            </li>
+            <li class="flex items-center">
+              <div
+                class="flex justify-center items-center w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 mr-2 sm:mr-4"
+              >
+                <img src="./assets/images/desktop/icon-mail.svg" alt="電子信箱" />
+              </div>
+              <a href="emailto:glasses@business.com" class="sm:text-3xl text-white hover:opacity-60"
+                >glasses@business.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex sm:flex-row flex-col justify-between py-6 sm:py-10 md:py-8 border-t border-white">
+          <p class="text-roboto text-white mb-2 sm:mb-0">
+            Copyright &copy; 2020 Glasses.All rights reserved.
+          </p>
+          <ul class="flex sm:flex-row flex-col sm:space-x-12">
+            <li><a class="text-white mb-2 sm:mb-0 hover:opacity-60" href="#">隱私權政策</a></li>
+            <li><a class="text-white hover:opacity-60" href="#">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>
