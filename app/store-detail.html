@@ -1,0 +1,62 @@
+---
+title: 門市據點
+layout: ./app/layout.ejs
+engine: ejs
+current: store-detail
+---
+
+<main>
+  <section>
+    <div class="max-w-[1320px] mx-auto px-[15px] md:px-9 lg:px-3 pt-10 sm:pt-20 md:pt-24 pb-16 sm:pb-20">
+      <h2
+        class="text-xl sm:text-5xl font-bold relative before:content-[''] before:absolute before:w-2 before:h-full before:bg-primary before:left-0 pl-4 mb-6 sm:mb-8"
+      >
+        門市據點
+      </h2>
+      <div class="flex items-center mb-6">
+        <label for="storeName" class="mr-2">選擇分店</label>
+        <select
+          id="storeName"
+          class="md:w-3/12 w: sm:w-1/2 sm:flex-none flex-1 bg-white text-[18px] text-[#495057] border border-[#ced4da] py-[6px] px-3"
+        >
+          <option value="台北中山旗艦店">台北中山旗艦店</option>
+          <option value="台北綠園店">台北綠園店</option>
+          <option value="台中清水旗艦店">台中清水旗艦店</option>
+          <option value="高雄中正形象店">高雄中正形象店</option>
+          <option value="高雄夢時代店">高雄夢時代店</option>
+        </select>
+      </div>
+      <div class="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-x-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-1">
+          <div
+            class="h-[224px] flex-1 bg-[url('./assets/images/mobile/storepage-1.png')] md:bg-[url('./assets/images/tablet/storepage-1.png')] bg-center bg-cover"
+          ></div>
+          <div class="flex-1 border border-[#00000020]">
+            <h3 class="text-xl py-2 px-6 border-b border-[#00000020]">台北中山旗艦店</h3>
+            <div class="text-lg py-4 px-6">
+              <ul>
+                <li class="flex mb-2">
+                  <i class="mr-2 bi bi-telephone"></i
+                  ><a href="#" class="hover:text-primary">電話：(02)000-1234</a>
+                </li>
+                <li class="flex mb-2">
+                  <i class="mr-2 bi bi-clock"></i
+                  ><a href="#" class="hover:text-primary">營業時間：10:00-21:00</a>
+                </li>
+                <li class="flex">
+                  <i class="mr-2 bi bi-geo-alt"></i
+                  ><a href="#" class="hover:text-primary">地址：台北市中山區南京東路25巷2-1號</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 地圖開始 -->
+        <div
+          class="sm:h-[414px] h-[208px] bg-[url('./assets/images/mobile/storepage-2.png')] md:bg-[url('./assets/images/tablet/storepage-2.png')] lg:bg-[url('./assets/images/desktop/storepage-2.png')] bg-center bg-cover"
+        ></div>
+        <!-- 地圖結束 -->
+      </div>
+    </div>
+  </section>
+</main>
